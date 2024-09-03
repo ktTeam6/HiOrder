@@ -29,11 +29,11 @@ public class Payment {
 
     @PostPersist
     public void onPostPersist() {
-        PaymentApproved paymentApproved = new PaymentApproved(this);
-        paymentApproved.publishAfterCommit();
+        // PaymentApproved paymentApproved = new PaymentApproved(this);
+        // paymentApproved.publishAfterCommit();
 
-        PaymentDenied paymentDenied = new PaymentDenied(this);
-        paymentDenied.publishAfterCommit();
+        // PaymentDenied paymentDenied = new PaymentDenied(this);
+        // paymentDenied.publishAfterCommit();
     }
 
     public static PaymentRepository repository() {
@@ -47,15 +47,24 @@ public class Payment {
     public static void payment(RoomReserved roomReserved) {
         //implement business logic here:
 
-        /** Example 1:  new item 
         Payment payment = new Payment();
+        payment.setCustomerId(roomReserved.getCustomerId());
+        payment.setPrice(roomReserved.getPrice());
+        payment.setReservationId(roomReserved.getId());
+
+        if(payment.getPrice() > 100000) {
+            payment.setStatus("deny");
+            PaymentDenied paymentDenied = new PaymentDenied(payment);
+            paymentDenied.publishAfterCommit();
+        } else {
+            payment.setStatus("accept");
+            PaymentApproved paymentApproved = new PaymentApproved(payment);
+            paymentApproved.publishAfterCommit();
+        }
         repository().save(payment);
 
-        PaymentApproved paymentApproved = new PaymentApproved(payment);
-        paymentApproved.publishAfterCommit();
-        PaymentDenied paymentDenied = new PaymentDenied(payment);
-        paymentDenied.publishAfterCommit();
-        */
+
+
 
         /** Example 2:  finding and process
         

@@ -28,8 +28,10 @@ public class Room {
 
     private String status;
 
-    @PostPersist
+    @PrePersist
     public void onPostPersist() {
+        this.status = "active";
+
         RoomRegistered roomRegistered = new RoomRegistered(this);
         roomRegistered.publishAfterCommit();
     }
@@ -42,8 +44,8 @@ public class Room {
 
     @PreRemove
     public void onPreRemove() {
-        RoomDeleted roomDeleted = new RoomDeleted(this);
-        roomDeleted.publishAfterCommit();
+        // RoomDeleted roomDeleted = new RoomDeleted(this);
+        // roomDeleted.publishAfterCommit();
     }
 
     public static RoomRepository repository() {
@@ -55,8 +57,10 @@ public class Room {
 
     //<<< Clean Arch / Port Method
     public void deleteRoom() {
-        //implement business logic here:
+        this.status = "deleted";
 
+        RoomDeleted roomDeleted = new RoomDeleted(this);
+        roomDeleted.publishAfterCommit();
     }
     //>>> Clean Arch / Port Method
 
