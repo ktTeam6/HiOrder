@@ -203,16 +203,6 @@
 
 ### 3.2 Event Storming
 
-- Event 도출
-- Actor, Command 추가
-- Aggregate 분류
-- Bounded Context 집합
-- Policy 생성
-- Context 매핑
-- 요구사항 커버 검증
-- 헥사고날 아키텍처 다이어그램 도출
-
-
 www.msaez.io/#/4814719/storming/airbnb-ex-240903 변경예정
 
 1. **Event 도출**
