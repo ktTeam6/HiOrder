@@ -1,11 +1,3 @@
-# 
-
-## Model
-www.msaez.io/#/4814719/storming/airbnb-ex-240903 변경예정
-
-# Read me
-
-생성일: 2024년 9월 10일 오전 10:10
 
 # KT 하이오더 프로젝트
 
@@ -219,13 +211,16 @@ www.msaez.io/#/4814719/storming/airbnb-ex-240903 변경예정
 - 헥사고날 아키텍처 다이어그램 도출
 </aside>
 
+## Model
+www.msaez.io/#/4814719/storming/airbnb-ex-240903 변경예정
+
 1. Event 도출
     
     ![image](https://github.com/user-attachments/assets/2fc6a471-cf8c-4351-aa43-e88e45c9c8f1)
 
     
 
-1. Actor, Command 추가
+2. Actor, Command 추가
     
     ![image](https://github.com/user-attachments/assets/3208fad3-d284-4bcf-a3eb-d49eb59d3ea8)
 
@@ -234,28 +229,28 @@ www.msaez.io/#/4814719/storming/airbnb-ex-240903 변경예정
 
     
 
-1. Aggregate 분류
+3. Aggregate 분류
     
     ![image](https://github.com/user-attachments/assets/1be9807b-4275-4004-a25c-7268c130922a)
 
     
 
-1. Bounded Context 집합
+4. Bounded Context 집합
     
     ![image](https://github.com/user-attachments/assets/5453da0f-033c-4255-b054-98ba2a2f7e18)
 
     
-2. Policy 생성
+5. Policy 생성
     
     ![image](https://github.com/user-attachments/assets/7c36b884-0af0-4fef-a9e4-772bf37095b6)
 
     
-3. Context 매핑
+6. Context 매핑
     
     ![image](https://github.com/user-attachments/assets/9e720795-4d14-4599-af27-c078cfd5bbfd)
 
     
-4. 요구사항 충족 검증
+7. 요구사항 충족 검증
     1. 기능적 요구사항
         
         ![image](https://github.com/user-attachments/assets/1a1ef485-39aa-40e6-a75f-976e365e61cc)
@@ -391,7 +386,7 @@ www.msaez.io/#/4814719/storming/airbnb-ex-240903 변경예정
         <aside>
         💡
         
-        1. **장애 격리**
+        2. **장애 격리**
         </aside>
         
         - 다이어그램에서 Menu, Chat, Order 서비스가 각각 독립적인 마이크로서비스로 처리
@@ -400,7 +395,7 @@ www.msaez.io/#/4814719/storming/airbnb-ex-240903 변경예정
         <aside>
         💡
         
-        1. **성능**
+        3. **성능**
         </aside>
         
         3.1 주문 상태 조회
@@ -425,6 +420,10 @@ www.msaez.io/#/4814719/storming/airbnb-ex-240903 변경예정
 ---
 
 ## 5. 구현
+
+## 6. 운영
+azure 관련 캡처 후 설명
+
 
 ## Before Running Services
 ### Make sure there is a Kafka server running
