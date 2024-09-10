@@ -248,7 +248,7 @@ www.msaez.io/#/4814719/storming/airbnb-ex-240903 변경예정
 
     
 7. 요구사항 충족 검증
-    a. 기능적 요구사항
+    1. 기능적 요구사항
         
         ![image](https://github.com/user-attachments/assets/1a1ef485-39aa-40e6-a75f-976e365e61cc)
 
