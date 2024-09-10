@@ -169,13 +169,9 @@
 
 ### 3.1 최적화된 조직 구조 선정
 
-<aside>
-💡
-
 각 기능별 마이크로 서비스를 기반으로 하이오더 서비스를 구축
 서비스 간 독립성과 확장성을 보장하면서도 전체 시스템이 원활하게 동작할 수 있도록 설계
 
-</aside>
 
 ### As-Is 조직
 
@@ -202,9 +198,6 @@
 
 ### 3.2 Event Storming
 
-<aside>
-💡
-
 - Event 도출
 - Actor, Command 추가
 - Aggregate 분류
@@ -213,7 +206,6 @@
 - Context 매핑
 - 요구사항 커버 검증
 - 헥사고날 아키텍처 다이어그램 도출
-</aside>
 
 
 ## Model
@@ -256,7 +248,7 @@ www.msaez.io/#/4814719/storming/airbnb-ex-240903 변경예정
 
     
 7. 요구사항 충족 검증
-    1. 기능적 요구사항
+    a. 기능적 요구사항
         
         ![image](https://github.com/user-attachments/assets/1a1ef485-39aa-40e6-a75f-976e365e61cc)
 
@@ -265,12 +257,10 @@ www.msaez.io/#/4814719/storming/airbnb-ex-240903 변경예정
         
         ### **고객 기능 요구사항**
         
-        <aside>
-        💡
-        
+    
         **Order Bounded Context 내 고객의 메뉴 선택 및 주문 과정 시나리오 충족**
         
-        </aside>
+     
         
         ![image](https://github.com/user-attachments/assets/20dd78e4-0df1-4ec9-abf8-ae04786996d4)
 
@@ -289,12 +279,9 @@ www.msaez.io/#/4814719/storming/airbnb-ex-240903 변경예정
 
    
         
-        <aside>
-        💡
-        
+
         **고객의 주문 내역 확인 및 푸시 알림 시나리오 충족**
         
-        </aside>
         
         ![image](https://github.com/user-attachments/assets/06bc98c0-b030-4674-868f-09ab734a9e28)
 
@@ -303,12 +290,11 @@ www.msaez.io/#/4814719/storming/airbnb-ex-240903 변경예정
         - 고객은 매장 운영자가 주문 접수 시, 메뉴 완성 시 해당 내용에 대한 푸시 알림을 받는다.
 
    
-        <aside>
-        💡
+
         
         **고객의 문의 채팅 시나리오 충족**
         
-        </aside>
+
         
         ![image](https://github.com/user-attachments/assets/73727e4c-1c7a-4630-b308-c18b1b369fa7)
 
@@ -318,12 +304,9 @@ www.msaez.io/#/4814719/storming/airbnb-ex-240903 변경예정
    
         ### **매장 운영자 기능 요구사항**
         
-        <aside>
-        💡
         
         **매장 운영자의 하이오더 서비스 접속 및 로그인 시나리오 충족**
         
-        </aside>
         
         ![image](https://github.com/user-attachments/assets/7c114bac-a1de-42de-b720-1c9498ac02f1)
 
@@ -331,25 +314,19 @@ www.msaez.io/#/4814719/storming/airbnb-ex-240903 변경예정
         - 매장 운영자는 하이오더 서비스에 로그인한다.
           
         
-        <aside>
-        💡
-        
+
         **매장 운영자의 메뉴 관리 시나리오 충족**
-        
-        </aside>
-        
+
         ![image](https://github.com/user-attachments/assets/a073acab-82e6-4642-9218-7b3b538ee3e8)
 
         
         - 운영자는 메뉴 관리 페이지에서 새로운 메뉴를 추가하거나 기존 메뉴를 수정, 제거한다.
           
         
-        <aside>
-        💡
-        
+
         **매장 운영자의 주문 관리 및 테이블 관리 시나리오 충족**
         
-        </aside>
+
         
         ![image](https://github.com/user-attachments/assets/84ec0be0-d86a-4392-a584-8e3c5c234b7c)
 
@@ -357,14 +334,11 @@ www.msaez.io/#/4814719/storming/airbnb-ex-240903 변경예정
         - 운영자는 테이블 관리 페이지에서 각 테이블의 주문 상태와 내역을 실시간으로 확인하고 관리한다.
         - 운영자는 주문 관리 페이지에서 실시간으로 주문을 확인하고, 주문 접수, 메뉴 완성 등의 상태를 업데이트하여 고객에게 푸시 알림을 통해 전달한다.
           
-        
-        <aside>
-        💡
+
         
         **매장 운영자의 문의 채팅 시나리오 충족**
         
-        </aside>
-        
+
         ![image](https://github.com/user-attachments/assets/dfacfe2e-45a9-4bb6-8a8b-9228d922a0fe)
 
         
@@ -377,12 +351,8 @@ www.msaez.io/#/4814719/storming/airbnb-ex-240903 변경예정
         
         상기 이벤트 스토밍 다이어그램은 비기능적 세부 요구사항 3가지를 모두 충족함
         
-        <aside>
-        💡
         
-        1. 트랜잭션 관리
-        </aside>
-        
+        **1. 트랜잭션 관리**
         1.1 주문 트랜잭션
         
         - 이벤트 스토밍 다이어그램에서는 Order와 관련된 주문 생성, 상태 업데이트가 명확하게 정의
@@ -395,22 +365,17 @@ www.msaez.io/#/4814719/storming/airbnb-ex-240903 변경예정
         - Eventual Consistency 방식을 적용해 주문 상태가 일관되게 유지되고, 데이터가 확실히 반영되는지 검증 가능
           
         
-        <aside>
-        💡
         
-        2. 장애 격리
-        </aside>
+        **2. 장애 격리**
+
         
         - 다이어그램에서 Menu, Chat, Order 서비스가 각각 독립적인 마이크로서비스로 처리
         - Menu나 Chat 서비스에 장애가 발생하더라도, Order 서비스는 비동기 호출 및 이벤트 기반(Event-driven) 구조로 설계되어 있어 고객의 주문 처리는 영향받지 않음
           
         
-        <aside>
-        💡
+
         
-        3. 성능
-        </aside>
-        
+        **3. 성능**
         3.1 주문 상태 조회
         
         - 주문 상태는 OrderManagement에서 관리
