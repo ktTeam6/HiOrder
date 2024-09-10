@@ -215,13 +215,13 @@
 
 www.msaez.io/#/4814719/storming/airbnb-ex-240903 변경예정
 
-1. Event 도출
+1. **Event 도출**
     
     ![image](https://github.com/user-attachments/assets/2fc6a471-cf8c-4351-aa43-e88e45c9c8f1)
 
     
 
-2. Actor, Command 추가
+2. **Actor, Command 추가**
     
     ![image](https://github.com/user-attachments/assets/3208fad3-d284-4bcf-a3eb-d49eb59d3ea8)
 
@@ -230,29 +230,29 @@ www.msaez.io/#/4814719/storming/airbnb-ex-240903 변경예정
 
     
 
-3. Aggregate 분류
+3. **Aggregate 분류**
     
     ![image](https://github.com/user-attachments/assets/1be9807b-4275-4004-a25c-7268c130922a)
 
     
 
-4. Bounded Context 집합
+4. **Bounded Context 집합**
     
     ![image](https://github.com/user-attachments/assets/5453da0f-033c-4255-b054-98ba2a2f7e18)
 
     
-5. Policy 생성
+5. **Policy 생성**
     
     ![image](https://github.com/user-attachments/assets/7c36b884-0af0-4fef-a9e4-772bf37095b6)
 
     
-6. Context 매핑
+6. **Context 매핑**
     
     ![image](https://github.com/user-attachments/assets/9e720795-4d14-4599-af27-c078cfd5bbfd)
 
-## 3.3 요구사항 커버 검증
+### **3.3 요구사항 커버 검증**
 
-### 1. 기능적 요구사항 > 고객
+**1. 기능적 요구사항 > 고객**
         
 ![image](https://github.com/user-attachments/assets/1a1ef485-39aa-40e6-a75f-976e365e61cc)
 
@@ -266,14 +266,19 @@ www.msaez.io/#/4814719/storming/airbnb-ex-240903 변경예정
         
 ![image](https://github.com/user-attachments/assets/20dd78e4-0df1-4ec9-abf8-ae04786996d4)
 
-    - 메뉴 상세 정보
-      고객이 메인 페이지에서 특정 메뉴를 클릭하면, 해당 메뉴의 상세 정보(사진, 메뉴명, 가격, 설명, 주문수, 순위)를 확인할 수 있는 상세 페이지로 이동한다.
-            
-    - 장바구니 담기  
-      고객은 원하는 메뉴를 선택하고 ‘주문하기’ 버튼을 클릭하여 장바구니에 담을 수 있다.
-            
-    - 주문 확정
-      장바구니에서 선택된 메뉴의 개수와 총 금액을 확인한 후, ‘주문하기’ 버튼을 클릭하면 주문이 최종 확정된다.
+
+- 메뉴 상세 정보
+    
+    고객이 메인 페이지에서 특정 메뉴를 클릭하면, 해당 메뉴의 상세 정보(사진, 메뉴명, 가격, 설명, 주문수, 순위)를 확인할 수 있는 상세 페이지로 이동한다.
+    
+- 장바구니 담기
+    
+    고객은 원하는 메뉴를 선택하고 ‘주문하기’ 버튼을 클릭하여 장바구니에 담을 수 있다.
+    
+- 주문 확정
+    
+    장바구니에서 선택된 메뉴의 개수와 총 금액을 확인한 후, ‘주문하기’ 버튼을 클릭하면 주문이 최종 확정된다.
+
 
    
         
@@ -283,11 +288,10 @@ www.msaez.io/#/4814719/storming/airbnb-ex-240903 변경예정
         
 ![image](https://github.com/user-attachments/assets/06bc98c0-b030-4674-868f-09ab734a9e28)
 
-        
-    - 고객은 주문 내역 페이지에서 자신이 주문한 메뉴의 상세 내역(메뉴명, 가격, 수량)을 확인할 수 있다.
-    - 고객은 매장 운영자가 주문 접수 시, 메뉴 완성 시 해당 내용에 대한 푸시 알림을 받는다.
 
-   
+- 고객은 주문 내역 페이지에서 자신이 주문한 메뉴의 상세 내역(메뉴명, 가격, 수량)을 확인할 수 있다.
+- 고객은 매장 운영자가 주문 접수 시, 메뉴 완성 시 해당 내용에 대한 푸시 알림을 받는다.
+ 
 
         
 **고객의 문의 채팅 시나리오 충족**
@@ -295,12 +299,13 @@ www.msaez.io/#/4814719/storming/airbnb-ex-240903 변경예정
 ![image](https://github.com/user-attachments/assets/73727e4c-1c7a-4630-b308-c18b1b369fa7)
 
         
-    - 고객은 매장 운영자와 실시간 채팅을 통해 메뉴나 주문에 대한 문의 사항을 해결할 수 있다.  
+
+- 고객은 매장 운영자와 실시간 채팅을 통해 메뉴나 주문에 대한 문의 사항을 해결할 수 있다.
 
 
 
      
-### 2. 기능적 요구사항 > 매장 운영자
+### **2. 기능적 요구사항 > 매장 운영자**
         
         
 **매장 운영자의 하이오더 서비스 접속 및 로그인 시나리오 충족**
@@ -308,30 +313,27 @@ www.msaez.io/#/4814719/storming/airbnb-ex-240903 변경예정
 ![image](https://github.com/user-attachments/assets/7c114bac-a1de-42de-b720-1c9498ac02f1)
 
         
-    - 매장 운영자는 하이오더 서비스에 로그인한다.  
-
+- 매장 운영자는 하이오더 서비스에 로그인한다.
           
 **매장 운영자의 메뉴 관리 시나리오 충족**
 
 ![image](https://github.com/user-attachments/assets/a073acab-82e6-4642-9218-7b3b538ee3e8)
 
-    - 운영자는 메뉴 관리 페이지에서 새로운 메뉴를 추가하거나 기존 메뉴를 수정, 제거한다.  
+- 운영자는 메뉴 관리 페이지에서 새로운 메뉴를 추가하거나 기존 메뉴를 수정, 제거한다.
 
 
 **매장 운영자의 주문 관리 및 테이블 관리 시나리오 충족**
         
 ![image](https://github.com/user-attachments/assets/84ec0be0-d86a-4392-a584-8e3c5c234b7c)
 
-    - 운영자는 테이블 관리 페이지에서 각 테이블의 주문 상태와 내역을 실시간으로 확인하고 관리한다.
-    - 운영자는 주문 관리 페이지에서 실시간으로 주문을 확인하고, 주문 접수, 메뉴 완성 등의 상태를 업데이트하여 고객에게 푸시 알림을 통해 전달한다.  
-          
+- 운영자는 테이블 관리 페이지에서 각 테이블의 주문 상태와 내역을 실시간으로 확인하고 관리한다.
+- 운영자는 주문 관리 페이지에서 실시간으로 주문을 확인하고, 주문 접수, 메뉴 완성 등의 상태를 업데이트하여 고객에게 푸시 알림을 통해 전달한다.        
 
 **매장 운영자의 문의 채팅 시나리오 충족**
 
 ![image](https://github.com/user-attachments/assets/dfacfe2e-45a9-4bb6-8a8b-9228d922a0fe)
 
-    - 운영자는 문의 채팅 페이지에서 고객의 질문에 실시간으로 응답하고 문제를 해결할 수 있다.  
-
+- 운영자는 문의 채팅 페이지에서 고객의 질문에 실시간으로 응답하고 문제를 해결할 수 있다.
         
 ### 2. 비기능적 요구사항 
         
@@ -343,35 +345,36 @@ www.msaez.io/#/4814719/storming/airbnb-ex-240903 변경예정
         
 **1. 트랜잭션 관리**
 
-1.1 주문 트랜잭션    
-  
-    - 이벤트 스토밍 다이어그램에서는 Order와 관련된 주문 생성, 상태 업데이트가 명확하게 정의  
-    - AddToCart 및 Order 커맨드와 이를 반영하는 OrderPlaced 이벤트는 Sync 호출 방식으로 처리
-        
-1.2 주문 상태 관리  
-  
-    - 주문이 생성된 후, 주문 상태는 StatusUpdated 이벤트를 통해 관리  
-    - OrderManagement 서비스와 Push 서비스가 상호작용하여 주문 상태가 변경될 때마다 이벤트를 발생
-    - Eventual Consistency 방식을 적용해 주문 상태가 일관되게 유지되고, 데이터가 확실히 반영되는지 검증 가능
-          
+1.1 주문 트랜잭션
+
+- 이벤트 스토밍 다이어그램에서는 Order와 관련된 주문 생성, 상태 업데이트가 명확하게 정의
+- AddToCart 및 Order 커맨드와 이를 반영하는 OrderPlaced 이벤트는 Sync 호출 방식으로 처리
+
+1.2 주문 상태 관리
+
+- 주문이 생성된 후, 주문 상태는 StatusUpdated 이벤트를 통해 관리
+- OrderManagement 서비스와 Push 서비스가 상호작용하여 주문 상태가 변경될 때마다 이벤트를 발생 - Eventual Consistency 방식을 적용해 주문 상태가 일관되게 유지되고, 데이터가 확실히 반영되는지 검증 가능
 
 **2. 장애 격리**
+
 - 다이어그램에서 Menu, Chat, Order 서비스가 각각 독립적인 마이크로서비스로 처리
 - Menu나 Chat 서비스에 장애가 발생하더라도, Order 서비스는 비동기 호출 및 이벤트 기반(Event-driven) 구조로 설계되어 있어 고객의 주문 처리는 영향받지 않음
 
-**3. 성능**  
+**3. 성능**
 
-3.1 주문 상태 조회  
-    - 주문 상태는 OrderManagement에서 관리  
-    - 고객이 실시간으로 자신의 주문 상태를 조회  
-  
-3.2 알림 서비스  
-    - 주문 상태가 변경되면 Push 서비스에서 StatusUpdated 이벤트에 따라 푸시 알림이 전송  
-    - 주문 상태나 채팅 등의 이벤트 발생 시 고객에게 즉시 알림을 보냅니다.  
-        
-3.3 응답 시간  
-    - Login, Order, Menu, Chat 등의 서비스는 각각 독립적인 마이크로서비스로 운영 및 처리
- 시스템은 트래픽 증가 상황에서도 마이크로서비스 간 독립성을 통해 성능 저하 없이 빠르게 응답 가능  
+3.1 주문 상태 조회
+
+- 주문 상태는 OrderManagement에서 관리
+- 고객이 실시간으로 자신의 주문 상태를 조회
+
+3.2 알림 서비스
+
+- 주문 상태가 변경되면 Push 서비스에서 StatusUpdated 이벤트에 따라 푸시 알림이 전송
+- 주문 상태나 채팅 등의 이벤트 발생 시 고객에게 즉시 알림을 보냅니다.
+
+3.3 응답 시간
+
+- Login, Order, Menu, Chat 등의 서비스는 각각 독립적인 마이크로서비스로 운영 및 처리 시스템은 트래픽 증가 상황에서도 마이크로서비스 간 독립성을 통해 성능 저하 없이 빠르게 응답 가능
 
         
 ### 3.4 헥사고날 아키텍처 다이어그램 도출
