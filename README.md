@@ -9,7 +9,8 @@ www.msaez.io/#/4814719/storming/airbnb-ex-240903 변경예정
 
 # KT 하이오더 프로젝트
 
-![image](https://github.com/user-attachments/assets/0d645b48-a1e7-40a0-84e0-884946865462)
+![image](https://github.com/user-attachments/assets/12b180db-4810-4acf-8a40-062418850c79)
+
 
 ---
 
@@ -51,7 +52,6 @@ www.msaez.io/#/4814719/storming/airbnb-ex-240903 변경예정
 
 1. **서비스 접속 및 로그인**
     - 고객은 테이블에 부착된 QR 코드를 스캔하여 하이오더 서비스에 접속하고, 로그인하여 서비스를 이용한다.
-      
 2. **메인 페이지 구성**
     - **카테고리별 메뉴 소개**
         - 각 카테고리별로 음식 메뉴가 나열되어 있으며, 메뉴명, 가격, 사진이 포함된다.
@@ -61,7 +61,6 @@ www.msaez.io/#/4814719/storming/airbnb-ex-240903 변경예정
         - **주문 내역**: 해당 테이블의 전체 주문 내역을 확인할 수 있다.
     - **우측 상단 아이콘**
         - **순위**: 매장 전체 메뉴의 인기 순위를 확인할 수 있다.
-          
 3. **메뉴 선택 및 주문 과정**
     - **메뉴 상세 정보**
         - 고객이 메인 페이지에서 특정 메뉴를 클릭하면, 해당 메뉴의 상세 정보(사진, 메뉴명, 가격, 설명, 주문수, 순위)를 확인할 수 있는 상세 페이지로 이동한다.
@@ -69,11 +68,9 @@ www.msaez.io/#/4814719/storming/airbnb-ex-240903 변경예정
         - 고객은 원하는 메뉴를 선택하고 ‘주문하기’ 버튼을 클릭하여 장바구니에 담을 수 있다.
     - **주문 확정**
         - 장바구니에서 선택된 메뉴의 개수와 총 금액을 확인한 후, ‘주문하기’ 버튼을 클릭하면 주문이 최종 확정된다.
-          
 4. **주문 내역 확인**
     - 고객은 주문 내역 페이지에서 자신이 주문한 메뉴의 상세 내역(메뉴명, 가격, 수량)을 확인할 수 있다.
     - 고객은 매장 운영자가 주문 접수 시, 메뉴 완성 시 해당 내용에 대한 푸시 알림을 받는다.
-      
 5. **문의 채팅**:
     - 고객은 매장 운영자와 실시간 채팅을 통해 메뉴나 주문에 대한 문의 사항을 해결할 수 있다.
 
@@ -81,7 +78,7 @@ www.msaez.io/#/4814719/storming/airbnb-ex-240903 변경예정
 
 1. **서비스 접속 및 로그인**
     - 매장 운영자는 하이오더 서비스에 로그인한다.
-      
+    
 2. **메인 페이지 구성**
     - **테이블 관리**
         - 각 테이블의 주문 상태를 관리하고, 새로운 주문과 기존 주문 내역, 총 금액을 확인한다.
@@ -91,29 +88,29 @@ www.msaez.io/#/4814719/storming/airbnb-ex-240903 변경예정
         - 실시간으로 업데이트되는 주문을 모니터링하며, 주문 상태를 관리한다.
     - **문의 채팅**
         - 고객의 문의에 실시간으로 응답하여 문제를 해결한다.
-          
+        
 3. **테이블 관리**
     - 운영자는 테이블 관리 페이지에서 각 테이블의 주문 상태와 내역을 실시간으로 확인하고 관리한다.
-      
+    
 4. **메뉴 관리**
     - 운영자는 메뉴 관리 페이지에서 새로운 메뉴를 추가하거나 기존 메뉴를 수정, 제거한다.
-      
+    
 5. **주문 관리**
     - 운영자는 주문 관리 페이지에서 실시간으로 주문을 확인하고, 주문 접수, 메뉴 완성 등의 상태를 업데이트하여 고객에게 푸시 알림을 통해 전달한다.
-      
+    
 6. **문의 채팅**:
     - 운영자는 문의 채팅 페이지에서 고객의 질문에 실시간으로 응답하고 문제를 해결할 수 있다.
 
 ### 1.2 비기능적 요구사항
 
 1. **트랜잭션 관리**
-- **주문 트랜잭션**: 주문이 생성되면 모든 관련 데이터는 트랜잭션 단위로 일관성 있게 처리되어야 하며, 주문 데이터의 무결성을 보장해야 한다. (Sync 호출)
-- **주문 상태 관리**: 주문 상태가 변경될 때마다 고객과 매장 운영자가 정확하고 일관된 정보를 확인할 수 있어야 하며, 시스템은 이와 관련된 데이터를 지속적으로 업데이트하고 반영해야 한다.
-  
-2. **장애 격리**
+    - **주문 트랜잭션**: 주문이 생성되면 모든 관련 데이터는 트랜잭션 단위로 일관성 있게 처리되어야 하며, 주문 데이터의 무결성을 보장해야 한다. (Sync 호출)
+    - **주문 상태 관리**: 주문 상태가 변경될 때마다 고객과 매장 운영자가 정확하고 일관된 정보를 확인할 수 있어야 하며, 시스템은 이와 관련된 데이터를 지속적으로 업데이트하고 반영해야 한다.
+
+1. **장애 격리**
     - **장애 격리**: 메뉴 관리나 채팅 기능에 장애가 발생하더라도, 고객의 주문 처리 기능은 365일 24시간 원활하게 작동해야 한다. (Async, Event-driven, Eventual Consistency)
-      
-3. **성능**
+    
+2. **성능**
     - **주문 상태 조회**: 고객이 주문 상태를 실시간으로 확인할 수 있어야 하며, 모든 상태 업데이트는 최대한 신속하게 처리되어야 한다. (CQRS)
     - **알림 서비스**: 주문 상태가 변경되면 고객에게 실시간으로 알림이 전달되어야 한다. 이를 위해 푸시 알림을 사용할 수 있다. (Event-driven)
     - **응답 시간**: 시스템의 모든 사용자 인터페이스(UI)는 3초 이내에 응답해야 하며, 높은 트래픽 상황에서도 성능 저하 없이 원활하게 작동해야 한다.
@@ -186,7 +183,7 @@ www.msaez.io/#/4814719/storming/airbnb-ex-240903 변경예정
 
 ### As-Is 조직
 
-![image](https://github.com/user-attachments/assets/18055aae-50f9-422c-bbb3-fd1c6c86a197)
+![image](https://github.com/user-attachments/assets/cce90256-425e-4fe0-8c3a-8b09525a6d0e)
 
 
 - 각 팀의 역할이 기능별로 구성된 수평적 구조
@@ -197,7 +194,8 @@ www.msaez.io/#/4814719/storming/airbnb-ex-240903 변경예정
 
 ### To-Be 조직
 
-![image](https://github.com/user-attachments/assets/8b58667a-26c8-47c0-8cb7-522d39b5912b)
+![image](https://github.com/user-attachments/assets/e63dfea3-e4ac-4d63-b5d3-2f7b7c892f33)
+
 
 - 서비스별로 팀이 구성된 수직적인 구조
 - 특정 마이크로서비스(예: 로그인 및 접근 관리, 메뉴 관리, 주문 관리 등)를 책임
@@ -223,44 +221,45 @@ www.msaez.io/#/4814719/storming/airbnb-ex-240903 변경예정
 
 1. Event 도출
     
-    ![image](https://github.com/user-attachments/assets/f34d7f78-d0f0-4830-a164-c4526b70acb3)
+    ![image](https://github.com/user-attachments/assets/2fc6a471-cf8c-4351-aa43-e88e45c9c8f1)
 
     
 
 1. Actor, Command 추가
     
-    ![image](https://github.com/user-attachments/assets/2394df99-17f6-4e81-a89b-864b92300ccf)
+    ![image](https://github.com/user-attachments/assets/3208fad3-d284-4bcf-a3eb-d49eb59d3ea8)
 
     
-    ![image](https://github.com/user-attachments/assets/dbb1110c-2d37-4778-bf60-7fe27115c34f)
+    ![image](https://github.com/user-attachments/assets/653e3c1b-6a21-4879-a96b-e8eea94ea332)
 
     
 
 1. Aggregate 분류
     
-    ![image](https://github.com/user-attachments/assets/52f03d31-b0fb-42e4-9443-2b7e5ae79c51)
+    ![image](https://github.com/user-attachments/assets/1be9807b-4275-4004-a25c-7268c130922a)
 
     
 
 1. Bounded Context 집합
     
-    ![image](https://github.com/user-attachments/assets/980fa875-074f-404c-8028-56ad87c1dd6e)
+    ![image](https://github.com/user-attachments/assets/5453da0f-033c-4255-b054-98ba2a2f7e18)
 
     
 2. Policy 생성
     
-    ![image](https://github.com/user-attachments/assets/9c2e41dd-7019-442e-bf03-3ef3055dd842)
+    ![image](https://github.com/user-attachments/assets/7c36b884-0af0-4fef-a9e4-772bf37095b6)
 
     
 3. Context 매핑
     
-    ![image](https://github.com/user-attachments/assets/4a9b3766-d87c-44fb-b73a-4ded4c1c4fd6)
+    ![image](https://github.com/user-attachments/assets/9e720795-4d14-4599-af27-c078cfd5bbfd)
 
     
 4. 요구사항 충족 검증
     1. 기능적 요구사항
         
-        ![요구사항 검증 전체.PNG](%25EC%259A%2594%25EA%25B5%25AC%25EC%2582%25AC%25ED%2595%25AD_%25EA%25B2%2580%25EC%25A6%259D_%25EC%25A0%2584%25EC%25B2%25B4.png)
+        ![image](https://github.com/user-attachments/assets/1a1ef485-39aa-40e6-a75f-976e365e61cc)
+
         
         상기 모델은 고객 기능 요구사항 3가지, 매장 운영자 요구사항 4가지의 모든 요구사항을 충족함
         
@@ -273,7 +272,8 @@ www.msaez.io/#/4814719/storming/airbnb-ex-240903 변경예정
         
         </aside>
         
-        ![image.png](image%207.png)
+        ![image](https://github.com/user-attachments/assets/20dd78e4-0df1-4ec9-abf8-ae04786996d4)
+
         
         - **메뉴 상세 정보**
             
@@ -295,7 +295,8 @@ www.msaez.io/#/4814719/storming/airbnb-ex-240903 변경예정
         
         </aside>
         
-        ![image.png](image%208.png)
+        ![image](https://github.com/user-attachments/assets/06bc98c0-b030-4674-868f-09ab734a9e28)
+
         
         - 고객은 주문 내역 페이지에서 자신이 주문한 메뉴의 상세 내역(메뉴명, 가격, 수량)을 확인할 수 있다.
         - 고객은 매장 운영자가 주문 접수 시, 메뉴 완성 시 해당 내용에 대한 푸시 알림을 받는다.
@@ -307,7 +308,8 @@ www.msaez.io/#/4814719/storming/airbnb-ex-240903 변경예정
         
         </aside>
         
-        ![채팅 부분 다이어그램.PNG](%25EC%25B1%2584%25ED%258C%2585_%25EB%25B6%2580%25EB%25B6%2584_%25EB%258B%25A4%25EC%259D%25B4%25EC%2596%25B4%25EA%25B7%25B8%25EB%259E%25A8.png)
+        ![image](https://github.com/user-attachments/assets/73727e4c-1c7a-4630-b308-c18b1b369fa7)
+
         
         - 고객은 매장 운영자와 실시간 채팅을 통해 메뉴나 주문에 대한 문의 사항을 해결할 수 있다.
         
@@ -320,7 +322,8 @@ www.msaez.io/#/4814719/storming/airbnb-ex-240903 변경예정
         
         </aside>
         
-        ![로그인 부분 다이어그램.PNG](%25EB%25A1%259C%25EA%25B7%25B8%25EC%259D%25B8_%25EB%25B6%2580%25EB%25B6%2584_%25EB%258B%25A4%25EC%259D%25B4%25EC%2596%25B4%25EA%25B7%25B8%25EB%259E%25A8.png)
+        ![image](https://github.com/user-attachments/assets/7c114bac-a1de-42de-b720-1c9498ac02f1)
+
         
         - 매장 운영자는 하이오더 서비스에 로그인한다.
         
@@ -331,7 +334,8 @@ www.msaez.io/#/4814719/storming/airbnb-ex-240903 변경예정
         
         </aside>
         
-        ![image.png](image%209.png)
+        ![image](https://github.com/user-attachments/assets/a073acab-82e6-4642-9218-7b3b538ee3e8)
+
         
         - 운영자는 메뉴 관리 페이지에서 새로운 메뉴를 추가하거나 기존 메뉴를 수정, 제거한다.
         
@@ -342,7 +346,8 @@ www.msaez.io/#/4814719/storming/airbnb-ex-240903 변경예정
         
         </aside>
         
-        ![image.png](image%208.png)
+        ![image](https://github.com/user-attachments/assets/84ec0be0-d86a-4392-a584-8e3c5c234b7c)
+
         
         - 운영자는 테이블 관리 페이지에서 각 테이블의 주문 상태와 내역을 실시간으로 확인하고 관리한다.
         - 운영자는 주문 관리 페이지에서 실시간으로 주문을 확인하고, 주문 접수, 메뉴 완성 등의 상태를 업데이트하여 고객에게 푸시 알림을 통해 전달한다.
@@ -354,14 +359,14 @@ www.msaez.io/#/4814719/storming/airbnb-ex-240903 변경예정
         
         </aside>
         
-        ![채팅 부분 다이어그램.PNG](%25EC%25B1%2584%25ED%258C%2585_%25EB%25B6%2580%25EB%25B6%2584_%25EB%258B%25A4%25EC%259D%25B4%25EC%2596%25B4%25EA%25B7%25B8%25EB%259E%25A8.png)
+        ![image](https://github.com/user-attachments/assets/dfacfe2e-45a9-4bb6-8a8b-9228d922a0fe)
+
         
         - 운영자는 문의 채팅 페이지에서 고객의 질문에 실시간으로 응답하고 문제를 해결할 수 있다.
         
     2. 비기능적 요구사항 
         
-        ![image](https://github.com/user-attachments/assets/69c54c4b-a211-4746-8d86-8ce74bff06a4)
-
+        ![image](https://github.com/user-attachments/assets/c807d943-7054-4509-8b4c-85ce26afe576)
 
         
         상기 이벤트 스토밍 다이어그램은 비기능적 세부 요구사항 3가지를 모두 충족함
