@@ -101,6 +101,7 @@
     
 6. **문의 채팅**:
     - 운영자는 문의 채팅 페이지에서 고객의 질문에 실시간으로 응답하고 문제를 해결할 수 있다.
+    
 
 ### 1.2 비기능적 요구사항
 
@@ -113,7 +114,6 @@
     
 3. **성능**
     - **주문 상태 조회**: 고객이 주문 상태를 실시간으로 확인할 수 있어야 하며, 모든 상태 업데이트는 최대한 신속하게 처리되어야 한다. (CQRS)
-    - **알림 서비스**: 주문 상태가 변경되면 고객에게 실시간으로 알림이 전달되어야 한다. 이를 위해 푸시 알림을 사용할 수 있다. (Event-driven)
     - **응답 시간**: 시스템의 모든 사용자 인터페이스(UI)는 3초 이내에 응답해야 하며, 높은 트래픽 상황에서도 성능 저하 없이 원활하게 작동해야 한다.
 
 
@@ -192,7 +192,8 @@
 
 ### To-Be 조직
 
-![image](https://github.com/user-attachments/assets/e63dfea3-e4ac-4d63-b5d3-2f7b7c892f33)
+![image](https://github.com/user-attachments/assets/171150c5-8d98-4808-b285-d561e8c91491)
+
 
 
 - 서비스별로 팀이 구성된 수직적인 구조
@@ -203,58 +204,62 @@
 
 ### 3.2 Event Storming
 
-www.msaez.io/#/4814719/storming/airbnb-ex-240903 변경예정
+https://www.msaez.io/#/storming/team6board_share
 
 1. **Event 도출**
     
-    ![image](https://github.com/user-attachments/assets/2fc6a471-cf8c-4351-aa43-e88e45c9c8f1)
+    ![image](https://github.com/user-attachments/assets/72cad374-add4-4097-aeff-7d56dcc2624e)
 
     
 
 2. **Actor, Command 추가**
     
-    ![image](https://github.com/user-attachments/assets/3208fad3-d284-4bcf-a3eb-d49eb59d3ea8)
+    ![image](https://github.com/user-attachments/assets/55b9f5a2-9061-4e03-9925-122269b0e74f)
 
-    
-    ![image](https://github.com/user-attachments/assets/653e3c1b-6a21-4879-a96b-e8eea94ea332)
 
     
 
 3. **Aggregate 분류**
     
-    ![image](https://github.com/user-attachments/assets/1be9807b-4275-4004-a25c-7268c130922a)
+    ![image](https://github.com/user-attachments/assets/a10f11ce-751d-40d0-af9a-8274b11832d4)
+
 
     
 
 4. **Bounded Context 집합**
     
-    ![image](https://github.com/user-attachments/assets/5453da0f-033c-4255-b054-98ba2a2f7e18)
+    ![image](https://github.com/user-attachments/assets/7904bcdc-ecef-428e-9c2d-04b9517f723d)
+
 
     
 5. **Policy 생성**
     
-    ![image](https://github.com/user-attachments/assets/7c36b884-0af0-4fef-a9e4-772bf37095b6)
+    ![image](https://github.com/user-attachments/assets/b7d9075b-fac6-49f3-95fa-2e56d4aaf4d2)
+
 
     
 6. **Context 매핑**
     
-    ![image](https://github.com/user-attachments/assets/9e720795-4d14-4599-af27-c078cfd5bbfd)
+    ![image](https://github.com/user-attachments/assets/ae36164a-2548-4053-b6d2-f02493771404)
+
 
 ### **3.3 요구사항 커버 검증**
 
 **1. 기능적 요구사항 > 고객**
         
-![image](https://github.com/user-attachments/assets/1a1ef485-39aa-40e6-a75f-976e365e61cc)
+![image](https://github.com/user-attachments/assets/13178ede-a11e-477c-8137-3d371dcf9083)
+
 
         
-상기 모델은 고객 기능 요구사항 3가지, 매장 운영자 요구사항 4가지의 모든 요구사항을 충족함
+상기 모델은 고객 기능 요구사항, 매장 운영자 요구사항을 충족함
 
     
 **Order Bounded Context 내 고객의 메뉴 선택 및 주문 과정 시나리오 충족**
         
      
         
-![image](https://github.com/user-attachments/assets/20dd78e4-0df1-4ec9-abf8-ae04786996d4)
+![image](https://github.com/user-attachments/assets/688bbd90-4a8a-4d5d-bf8c-146fc5c96166)
+
 
 
 - 메뉴 상세 정보
@@ -273,61 +278,48 @@ www.msaez.io/#/4814719/storming/airbnb-ex-240903 변경예정
    
         
 
-**고객의 주문 내역 확인 및 푸시 알림 시나리오 충족**
+**고객의 주문 내역 확인**
         
         
-![image](https://github.com/user-attachments/assets/06bc98c0-b030-4674-868f-09ab734a9e28)
+![image](https://github.com/user-attachments/assets/ddacd9a4-69fd-4fc9-ab98-196d9b9618d6)
+
 
 
 - 고객은 주문 내역 페이지에서 자신이 주문한 메뉴의 상세 내역(메뉴명, 가격, 수량)을 확인할 수 있다.
-- 고객은 매장 운영자가 주문 접수 시, 메뉴 완성 시 해당 내용에 대한 푸시 알림을 받는다.  
  
 
-        
-**고객의 문의 채팅 시나리오 충족**
-        
-![image](https://github.com/user-attachments/assets/73727e4c-1c7a-4630-b308-c18b1b369fa7)
-
-        
-
-- 고객은 매장 운영자와 실시간 채팅을 통해 메뉴나 주문에 대한 문의 사항을 해결할 수 있다.  
-  
-
+**채팅 및 알림 기능**  
+- 해당 기능은 Frontend 단에서 구현
 
      
-### **2. 기능적 요구사항 > 매장 운영자**
+**2. 기능적 요구사항 > 매장 운영자**
         
         
 **매장 운영자의 하이오더 서비스 접속 및 로그인 시나리오 충족**
 
-![image](https://github.com/user-attachments/assets/7c114bac-a1de-42de-b720-1c9498ac02f1)
+![image](https://github.com/user-attachments/assets/2ced376e-db97-4cdf-88dd-bd8bd8674106)
+
 
         
 - 매장 운영자는 하이오더 서비스에 로그인한다.  
           
-**매장 운영자의 메뉴 관리 시나리오 충족**
+**매장 운영자의 메뉴 관리 시나리오 및 주문 테이블 관리 시나리오 충족**
 
-![image](https://github.com/user-attachments/assets/a073acab-82e6-4642-9218-7b3b538ee3e8)
+![image](https://github.com/user-attachments/assets/3925e807-6c56-4c3e-a675-7c4a6aa8320e)
+
+
 
 - 운영자는 메뉴 관리 페이지에서 새로운 메뉴를 추가하거나 기존 메뉴를 수정, 제거한다.  
 
-
-**매장 운영자의 주문 관리 및 테이블 관리 시나리오 충족**
-        
-![image](https://github.com/user-attachments/assets/84ec0be0-d86a-4392-a584-8e3c5c234b7c)
-
 - 운영자는 테이블 관리 페이지에서 각 테이블의 주문 상태와 내역을 실시간으로 확인하고 관리한다.
-- 운영자는 주문 관리 페이지에서 실시간으로 주문을 확인하고, 주문 접수, 메뉴 완성 등의 상태를 업데이트하여 고객에게 푸시 알림을 통해 전달한다.  
   
-**매장 운영자의 문의 채팅 시나리오 충족**
-
-![image](https://github.com/user-attachments/assets/dfacfe2e-45a9-4bb6-8a8b-9228d922a0fe)
-
-- 운영자는 문의 채팅 페이지에서 고객의 질문에 실시간으로 응답하고 문제를 해결할 수 있다.  
+**채팅 및 알림 기능**  
+- 해당 기능은 Frontend 단에서 구현
         
 ### 2. 비기능적 요구사항 
         
-![image](https://github.com/user-attachments/assets/c807d943-7054-4509-8b4c-85ce26afe576)
+![image](https://github.com/user-attachments/assets/20407fc7-f5b6-4e73-b1e1-5c02738ffd45)
+
 
         
 상기 이벤트 스토밍 다이어그램은 비기능적 세부 요구사항 3가지를 모두 충족함  
@@ -357,116 +349,18 @@ www.msaez.io/#/4814719/storming/airbnb-ex-240903 변경예정
 - 주문 상태는 OrderManagement에서 관리
 - 고객이 실시간으로 자신의 주문 상태를 조회
 
-3.2 알림 서비스
-
-- 주문 상태가 변경되면 Push 서비스에서 StatusUpdated 이벤트에 따라 푸시 알림이 전송
-- 주문 상태나 채팅 등의 이벤트 발생 시 고객에게 즉시 알림을 보냅니다.
-
-3.3 응답 시간
+3.2 응답 시간
 
 - Login, Order, Menu, Chat 등의 서비스는 각각 독립적인 마이크로서비스로 운영 및 처리 시스템은 트래픽 증가 상황에서도 마이크로서비스 간 독립성을 통해 성능 저하 없이 빠르게 응답 가능
 
         
 ### 3.4 헥사고날 아키텍처 다이어그램 도출
 
-미정
+![image](https://github.com/user-attachments/assets/7425c3d8-06cb-4962-b025-00f87dc798ea)
+
 
 ---
 
 ## 5. 구현
 
 ## 6. 운영
-azure 관련 캡처 후 설명
-
-
-## Before Running Services
-### Make sure there is a Kafka server running
-```
-cd kafka
-docker-compose up
-```
-- Check the Kafka messages:
-```
-cd infra
-docker-compose exec -it kafka /bin/bash
-cd /bin
-./kafka-console-consumer --bootstrap-server localhost:9092 --topic
-```
-
-## Run the backend micro-services
-See the README.md files inside the each microservices directory:
-
-- room
-- reservation
-- review
-- payment
-- dashboard
-
-
-## Run API Gateway (Spring Gateway)
-```
-cd gateway
-mvn spring-boot:run
-```
-
-## Test by API
-- room
-```
- http :8088/rooms id="id" name="name" description="description" price="price" status="status" 
-```
-- reservation
-```
- http :8088/reservations id="id" customerId="customerId" roomId="roomId" date="date" price="price" status="status" 
-```
-- review
-```
- http :8088/reviews id="id" roomId="roomId" content="content" customerId="customerId" 
-```
-- payment
-```
- http :8088/payments id="id" customerId="customerId" reservationId="reservationId" price="price" status="status" 
-```
-- dashboard
-```
-```
-
-
-## Run the frontend
-```
-cd frontend
-npm i
-npm run serve
-```
-
-## Test by UI
-Open a browser to localhost:8088
-
-## Required Utilities
-
-- httpie (alternative for curl / POSTMAN) and network utils
-```
-sudo apt-get update
-sudo apt-get install net-tools
-sudo apt install iputils-ping
-pip install httpie
-```
-
-- kubernetes utilities (kubectl)
-```
-curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
-sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
-```
-
-- aws cli (aws)
-```
-curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-unzip awscliv2.zip
-sudo ./aws/install
-```
-
-- eksctl 
-```
-curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
-sudo mv /tmp/eksctl /usr/local/bin
-```
-
